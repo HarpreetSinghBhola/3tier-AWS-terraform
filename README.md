@@ -17,6 +17,7 @@ This repo contains code for a Node.js three-tier application. Web, API and DB la
 │   ├───pem-file
 │   └───Scripts-elk
 ├───terraform
+│   ├───AMI-baking-deployment
 │   └───scripts
 └───web
     ├───bin
