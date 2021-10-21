@@ -1,0 +1,43 @@
+{
+  "builders": [{
+    "type": "amazon-ebs",
+    "region": "eu-west-1",
+    "source_ami": "ami-0a8e758f5e873d1c1",
+    "instance_type": "t2.micro",
+    "ssh_username": "ubuntu",
+    "ami_name": "web-instance {{timestamp}}"
+  }],
+  "provisioners": [
+    {
+      "type": "file",
+      "source" : "./Scripts-elk/configure-beats.sh",
+      "destination" : "configure-beats.sh"
+    },
+    {
+      "type": "file",
+      "source" : "./Scripts-elk/enable-beats.sh",
+      "destination" : "enable-beats.sh"
+    },
+    {
+      "type": "file",
+      "source" : "./Scripts-elk/install-beats.sh",
+      "destination" : "install-beats.sh"
+    },
+    {
+      "type": "shell",
+      "inline": ["mkdir web", "sudo apt-get update", "sudo apt-get -y install npm nodejs"],
+      "pause_before": "10s"
+    },
+    {
+      "type": "file",
+      "source" : "../web/",
+      "destination" : "web"
+    },
+
+    {
+    "type": "shell",
+    "inline": ["cd web", "npm install"],
+    "pause_before": "10s"
+    }
+  ]
+}
