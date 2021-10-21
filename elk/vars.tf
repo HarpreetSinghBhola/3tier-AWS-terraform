@@ -2,10 +2,6 @@ variable "region" {
     default = "eu-west-1"
 }
 
-variable "WEB_PORT" {
-  default =  "8080"
-}
-
 variable "AMIS" {
   type = map(string)
   default = {
