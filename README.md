@@ -1,18 +1,18 @@
 # 3tier-AWS-terraform
 This repo contains code for a Node.js three-tier application. Web, API and DB layers are deployed using terraform version 1.0.8. ELK is being deployed on EC2 instance along with infra. We are using file and metric beats to forward the logs and metrics from Web and API instances.
 
-ÃÄÄÄapi
-³   ÀÄÄÄbin
-ÃÄÄÄelk
-³   ÃÄÄÄConfigFiles
-³   ÃÄÄÄpem-file
-³   ÀÄÄÄScripts-elk
-ÃÄÄÄterraform
-³   ÀÄÄÄscripts
-ÀÄÄÄweb
-    ÃÄÄÄbin
-    ÃÄÄÄpublic
-    ³   ÃÄÄÄimages
-    ³   ÀÄÄÄstylesheets
-    ÃÄÄÄroutes
-    ÀÄÄÄviews
+â”œâ”€â”€â”€api
+â”‚   â””â”€â”€â”€bin
+â”œâ”€â”€â”€elk
+â”‚   â”œâ”€â”€â”€ConfigFiles
+â”‚   â”œâ”€â”€â”€pem-file
+â”‚   â””â”€â”€â”€Scripts-elk
+â”œâ”€â”€â”€terraform
+â”‚   â””â”€â”€â”€scripts
+â””â”€â”€â”€web
+    â”œâ”€â”€â”€bin
+    â”œâ”€â”€â”€public
+    â”‚   â”œâ”€â”€â”€images
+    â”‚   â””â”€â”€â”€stylesheets
+    â”œâ”€â”€â”€routes
+    â””â”€â”€â”€views
